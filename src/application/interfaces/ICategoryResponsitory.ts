@@ -1,10 +1,11 @@
 import Category from "../../domain/entities/Category";
+import { CategoryResponse } from "../../infrastucture/responses/CategoryResponse";
 
 interface ICategoryResponsitory {
-  getCategories(): Promise<Category[]>;
-  createCategory(payload: Category): Promise<Category>;
-  updateCategory(id: string, payload: Category): Promise<Category>;
-  deleteCategory(id: string): Promise<void>;
+  getCategories(): Promise<CategoryResponse>;
+  createCategory(payload: Category): Promise<CategoryResponse>;
+  updateCategory(id: string, payload: Category): Promise<CategoryResponse>;
+  deleteCategory(id: string): Promise<CategoryResponse>;
 }
 
 export default ICategoryResponsitory;

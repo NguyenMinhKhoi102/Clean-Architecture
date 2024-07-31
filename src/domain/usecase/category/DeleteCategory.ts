@@ -1,4 +1,5 @@
 import ICategoryResponsitory from "../../../application/interfaces/ICategoryResponsitory";
+import { CategoryResponse } from "../../../infrastucture/responses/CategoryResponse";
 
 class DeleteCategory {
   private categoryResponsitory: ICategoryResponsitory;
@@ -7,7 +8,7 @@ class DeleteCategory {
     this.categoryResponsitory = categoryResponsitory;
   }
 
-  async execute(id: string): Promise<void> {
+  async execute(id: string): Promise<CategoryResponse> {
     return await this.categoryResponsitory.deleteCategory(id);
   }
 }

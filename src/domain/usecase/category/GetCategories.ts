@@ -1,4 +1,5 @@
 import ICategoryResponsitory from "../../../application/interfaces/ICategoryResponsitory";
+import { CategoryResponse } from "../../../infrastucture/responses/CategoryResponse";
 import Category from "../../entities/Category";
 
 class GetCategories {
@@ -8,7 +9,7 @@ class GetCategories {
     this.categoryResponsitory = categoryResponsitory;
   }
 
-  async execute(): Promise<Category[]> {
+  async execute(): Promise<CategoryResponse> {
     return await this.categoryResponsitory.getCategories();
   }
 }
