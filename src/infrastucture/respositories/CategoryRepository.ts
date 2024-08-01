@@ -1,4 +1,4 @@
-import ICategoryResponsitory from "../../application/interfaces/ICategoryResponsitory";
+import ICategoryResponsitory from "../../application/interfaces/ICategoryRespository";
 import Category from "../../domain/entities/Category";
 import categoryApi from "../api/CategoryApi";
 import { CategoryResponse } from "../responses/CategoryResponse";
@@ -22,3 +22,5 @@ class CategoryResponsitory implements ICategoryResponsitory {
     return await categoryApi.deleteCategories(id);
   }
 }
+
+export default CategoryResponsitory;

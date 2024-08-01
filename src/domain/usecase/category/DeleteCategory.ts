@@ -1,4 +1,4 @@
-import ICategoryResponsitory from "../../../application/interfaces/ICategoryResponsitory";
+import ICategoryResponsitory from "../../../application/interfaces/ICategoryRespository";
 import { CategoryResponse } from "../../../infrastucture/responses/CategoryResponse";
 
 class DeleteCategory {
